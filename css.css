@@ -46,7 +46,7 @@ header hgroup {
   text-align: right;
   text-decoration: underline rgba(0, 128, 128, 75%) double;
   animation-name: spaceInUp;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 header h1 {
@@ -64,7 +64,7 @@ header .big {
   padding-top: 50vh;
   margin: 0;
   animation-name: spaceInUp2;
-  animation-duration: 2s;
+  animation-duration: 1s;
   opacity: 0.8;
 }
 
@@ -114,6 +114,13 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.hint {
+  max-width: 36px;
+  height: auto;
+  float: right;
+  border: 4px dotted teal;
 }
 
 .big {
@@ -296,7 +303,7 @@ h4 {
 }
 
 @keyframes spaceInUp {
-  0% {opacity: 0;transform: scale(.5) translate(0%, -20%);}
+  0% {opacity: 0;transform: scale(.8) translate(0%, -5%);}
   100% {opacity: 1;transform: scale(1) translate(0%, 0%);
   }
 }
