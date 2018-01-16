@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   display: grid;
   font-family: 'Rambla', sans-serif;
-  background-color: rgba(0, 128, 128, 75%);
+  /*background-color: rgba(0, 128, 128, 75%);*/
   font-size: 18px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -20,15 +20,33 @@ a:visited {
 }
 
 header {
-  background-color: rgba(0, 128, 128, 75%);
+  background-color: rgba(0, 128, 128, 50%);
   height: 100vh;
   display: grid;
   grid-template-columns: auto 40%;
+  position: relative;
+}
+
+header::after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity : 0.33;
+  z-index: -1;
+  background-image: url(img/static.gif);
 }
 
 header hgroup {
+  opacity: 1;
   justify-self: end;
   text-align: right;
+  text-decoration: underline rgba(0, 128, 128, 75%) double;
+  animation-name: spaceInUp;
+  animation-duration: 2s;
 }
 
 header h1 {
@@ -36,7 +54,8 @@ header h1 {
   font-size: 10vw;
   padding-top: 50vh;
   margin: 0;
-  margin-bottom: -2.36vw;
+  margin-bottom: -0.5vw;
+  text-decoration: underline rgba(0, 128, 128, 50%) double;
 }
 
 header .big {
@@ -44,13 +63,17 @@ header .big {
   font-size: 16vw;
   padding-top: 50vh;
   margin: 0;
+  animation-name: spaceInUp2;
+  animation-duration: 2s;
+  opacity: 0.8;
 }
 
 header .tagline {
   font-size: 2.36vw;
   font-style: italic;
   margin: 0;
-  padding-top: -1vw;
+  text-decoration: underline rgba(0, 128, 128, 50%) double;
+  opacity: 0.75;
 }
 
 footer {
@@ -255,6 +278,8 @@ h4 {
   max-width: 640px;
 }
 
+/* animations */
+
 .sliderSlide--animate {
   transition: 0.6s ease-in-out;
 }
@@ -268,4 +293,15 @@ h4 {
   .sliderSlide--active ~ .sliderSlide {
     transform: translate(100%, 0);
   }
+}
+
+@keyframes spaceInUp {
+  0% {opacity: 0;transform: scale(.5) translate(0%, -20%);}
+  100% {opacity: 1;transform: scale(1) translate(0%, 0%);
+  }
+}
+
+@keyframes spaceInUp2 {
+  from {opacity: 0;transform: translate3d(0, -100%, 0);}
+  to {opacity: 0.8;transform: none;}
 }
