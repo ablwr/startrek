@@ -1,5 +1,6 @@
-/* shoutout to this codepen: https://codepen.io/nickmoreton/pen/pRVMqE */
+var myLazyLoad = new LazyLoad();
 
+/* shoutout to this codepen: https://codepen.io/nickmoreton/pen/pRVMqE */
 jQuery(document).ready(function() {
   var $sliderContainers = jQuery('.slider');
   var $body = jQuery('body');
