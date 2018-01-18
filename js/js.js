@@ -1,4 +1,9 @@
-var myLazyLoad = new LazyLoad();
+var lazyLazy = new LazyLoad({
+  elements_selector: ".sliderSlide",
+  callback_set: function(el) {
+    var oneLL = new LazyLoad({container: el});
+  }
+});
 
 /* shoutout to this codepen: https://codepen.io/nickmoreton/pen/pRVMqE */
 jQuery(document).ready(function() {
