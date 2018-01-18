@@ -20,8 +20,6 @@ a:visited {
 
 header {
   height: 80vh;
-  display: grid;
-  grid-template-columns: auto 5%;
   position: relative;
   opacity: 0.9;
 }
@@ -44,30 +42,21 @@ header hgroup {
   text-decoration: underline rgba(0, 128, 128, 75%) double;
   animation-name: spaceInUp;
   animation-duration: 1s;
+  padding-right: 2em;
 }
 
 header h1 {
   font-weight: 800;
-  font-size: 10vw;
-  padding-top: 50vh;
+  font-style: italic;
+  font-size: 15vmax;
+  padding-top: 40vh;
   margin: 0;
   margin-bottom: -0.5vw;
   text-decoration: underline rgba(0, 128, 128, 100%) double;
 }
 
-header .big {
-  font-weight: 800;
-  font-size: 30vw;
-  padding-top: 50vh;
-  margin: 0;
-  animation-name: spaceInUp2;
-  animation-duration: 1s;
-  opacity: 0.8;
-}
-
 header .tagline {
-  font-size: 2.3vw;
-  font-style: italic;
+  font-size: 3.5vmax;
   font-weight: bold;
   margin: 0;
   text-decoration: underline rgba(0, 128, 128, 100%) double;
@@ -78,7 +67,7 @@ header .tagline {
     display: block;
   }
   header h1 {
-    font-size: 20vw;
+    font-size: 15vw;
   }
   header .tagline {
     font-size: 6vw;
@@ -118,25 +107,9 @@ footer a {
   }
 }
 
-.introduction h1 {
-  font-weight: 800;
-  font-size: 4em;
-  padding-right: 5vw;
-  text-align: right;
-}
-
 img {
-  display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
-}
-
-.hint {
-  max-width: 36px;
-  height: auto;
-  float: left;
-  border: 4px dotted teal;
-  margin-right: 12px;
 }
 
 h3 {
