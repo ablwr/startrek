@@ -19,7 +19,7 @@ a:visited {
 }
 
 header {
-  height: 80vh;
+  height: 100vh;
   position: relative;
   opacity: 0.9;
 }
@@ -109,6 +109,8 @@ footer a {
 
 img {
   max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
 }
 
