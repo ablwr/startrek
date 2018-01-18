@@ -98,6 +98,7 @@ footer a {
   display: grid;
   grid-template-columns: 60% auto;
   padding: 4em;
+  margin-bottom: 8em;
 }
 @media (max-width: 800px) {
   .introduction {
