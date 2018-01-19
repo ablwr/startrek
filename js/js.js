@@ -33,14 +33,6 @@ jQuery(document).ready(function() {
       $first = $sliderContainer.find('.sliderSlide:first');
       $last = $sliderContainer.find('.sliderSlide:last');
       if($clicked.hasClass('next')) {
-        var nextBg = $activeSlide.next().children('.sliderSlideContent').data('background');
-        var nextLighten = tinycolor(nextBg).lighten(lightenBy).toString();
-        var nextLightenDouble = tinycolor(nextBg).lighten(lightenBy * 2).toString();
-        $sliderContainer.css('background-color', nextLighten);
-        $body.css('background-color', nextLightenDouble);
-        $activeSlide.removeClass('sliderSlide--active').next().addClass('sliderSlide--active');
-        $last.after($first);
-      } else if($clicked.hasClass('previous')) {
         var prevBg = $activeSlide.prev().children('.sliderSlideContent').data('background');
         var prevLighten = tinycolor(prevBg).lighten(lightenBy).toString();
         var prevLightenDouble = tinycolor(prevBg).lighten(lightenBy * 2).toString();
@@ -48,6 +40,14 @@ jQuery(document).ready(function() {
         $body.css('background-color', prevLightenDouble);
         $activeSlide.removeClass('sliderSlide--active').prev().addClass('sliderSlide--active');
         $first.before($last);
+      } else if($clicked.hasClass('previous')) {
+        var nextBg = $activeSlide.next().children('.sliderSlideContent').data('background');
+        var nextLighten = tinycolor(nextBg).lighten(lightenBy).toString();
+        var nextLightenDouble = tinycolor(nextBg).lighten(lightenBy * 2).toString();
+        $sliderContainer.css('background-color', nextLighten);
+        $body.css('background-color', nextLightenDouble);
+        $activeSlide.removeClass('sliderSlide--active').next().addClass('sliderSlide--active');
+        $last.after($first);
       }
     });
     $(window).resize(function(){
