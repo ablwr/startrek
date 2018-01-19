@@ -273,7 +273,7 @@ h4 {
 /**/
 
 .slider {
-  min-height: 720px;
+  min-height: 745px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   position: relative;
@@ -288,7 +288,7 @@ h4 {
   position: absolute;
   z-index: 9999;
   padding: 10px;
-  margin-top: -2em;
+  margin-top: -3.5em;
 }
 .sliderTitle p {
   padding: 0;
@@ -330,15 +330,16 @@ h4 {
 .slider .controls button:hover rect {
   fill: #fff;
 }
+
 .sliderInside {
   width: 100%;
   position: relative;
-  min-height: 720px;
+  min-height: 745px;
   overflow: hidden;
 }
 
 .sliderSlide {
-  min-height: 720px;
+  min-height: 745px;
   width: 100%;
   position: absolute;
   transform: translate(-800px, 100%);
@@ -361,6 +362,17 @@ h4 {
   margin: 0.5em;
 }
 
+@media (max-width: 800px) {
+  .sliderSlideContent {
+    padding: 2.2em 2em 0em 2em;
+  }
+  .sliderSlideContent p {
+    padding: 0em 1em 0em 1em;
+  }
+  .slider .controls {
+    top: 80%;
+  }
+}
 /* animations */
 
 .sliderSlide--animate {
