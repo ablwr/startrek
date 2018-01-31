@@ -227,6 +227,10 @@ footer {
   padding: 2em;
 }
 
+footer a, footer a:visited {
+  color: white;
+}
+
 .bumper {
   height: 20vh;
   background-color: #181f24;
